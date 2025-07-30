@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+       
+const aluno = {
+    nome: "Brad Pitt",
+    notas: [7.5, 8.0, 6.5],
+    
+    
+    calcularMedia: function() {
+        const soma = this.notas.reduce((total, nota) => total + nota, 0);
+        return soma / this.notas.length;
+    }
+};
+
+
+console.log(`Nome do aluno: ${aluno.nome}`);
+console.log(`Notas: ${aluno.notas.join(", ")}`);
+console.log(`Média: ${aluno.calcularMedia().toFixed(2)}`);
+
+
+const { nome } = aluno;
+console.log(`Nome extraído via desestruturação: ${nome}`);
+
+
+const novaNota = 9.0;
+aluno.notas = [...aluno.notas, novaNota];
+
+console.log(`Notas atualizadas: ${aluno.notas.join(", ")}`);
+console.log(`Nova média: ${aluno.calcularMedia().toFixed(2)}`);
+    </script>
+
+    /*
+    Objetos literais em JavaScript são estruturas de dados que armazenam propriedades
+     (pares chave-valor) e métodos (funções) em uma única entidade. Eles são criados usando a sintaxe de chaves {}
+      e são a forma mais simples de criar objetos em JavaScript.
+    */
+
+    
+    
+</body>
+</html>
